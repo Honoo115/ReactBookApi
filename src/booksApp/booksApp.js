@@ -15,15 +15,17 @@ class BooksApp extends Component {
   }
 }
 componentDidMount() {
-  fetch("https://www.googleapis.com/books/v1/volumes?q=&AIzaSyBLnsNugklSnZuKWbk0Ve75GfYBX1Qe1lc")
+  fetch("https://www.googleapis.com/books/v1/volumes?&AIzaSyBLnsNugklSnZuKWbk0Ve75GfYBX1Qe1lc")
   .then(response => {
     if (!response.ok) {
       throw new Error("Something went wrong, please try again later.");
     }
     return response;
-  })
+  });
   .then(response => response.json())
-  .then()
-}
+  .then(resJson => {
+    console.log(resJson)
+  });
+};
 
 export default BooksApp;
