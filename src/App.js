@@ -1,17 +1,9 @@
 import React from "react";
-import Split from "./composition/Split";
+import BooksApp from "./booksApp/booksApp";
 import "./App.css";
 
 function App() {
-  return (
-    <main className="App">
-      <Split />
-      <Split />
-      <Split />
-      <Split />
-      <Split />
-    </main>
-  );
+  return <BooksApp />;
 }
 
 export default App;
