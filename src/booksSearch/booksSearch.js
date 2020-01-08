@@ -21,7 +21,14 @@ class BooksSearch extends Component {
     return (
       <form>
         <label for="searchbox">Search:</label>
-        <input type="text" required id="seachbox"></input>
+        <input
+          type="text"
+          required
+          id="seachbox"
+          value={this.state.value}
+          onChange={this.handleChange}
+        ></input>
+        <input type="submit" value="Submit" />
       </form>
     );
   }
