@@ -11,6 +11,7 @@ class BooksSearch extends Component {
 
   handleChange(event) {
     this.setState({ value: event.target.value });
+    console.log("here");
   }
 
   handleSubmit(event) {
@@ -19,17 +20,19 @@ class BooksSearch extends Component {
 
   render() {
     return (
-      <form>
-        <label for="searchbox">Search:</label>
-        <input
-          type="text"
-          required
-          id="seachbox"
-          value={this.state.value}
-          onChange={this.handleChange}
-        ></input>
-        <input type="submit" value="Submit" />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label for="searchbox">Search:</label>
+          <input
+            type="text"
+            required
+            id="seachbox"
+            value={this.state.value}
+            onChange={this.handleChange}
+          ></input>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     );
   }
 }

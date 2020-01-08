@@ -15,11 +15,11 @@ class BooksApp extends Component {
   }
   componentDidMount() {
     fetch(
-      "https://www.googleapis.com/books/v1/volumes?q=Fowel&AIzaSyBLnsNugklSnZuKWbk0Ve75GfYBX1Qe1lc"
+      `https://www.googleapis.com/books/v1/volumes?q="+event.state.value"&AIzaSyBLnsNugklSnZuKWbk0Ve75GfYBX1Qe1lc`
     )
       .then(response => {
         if (!response.ok) {
-          // throw new Error("Something went wrong, please try again later.");
+          throw new Error("Something went wrong, please try again later.");
         }
         return response;
       })
