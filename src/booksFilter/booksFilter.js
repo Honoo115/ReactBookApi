@@ -18,7 +18,7 @@ class BooksFilter extends Component {
         </select>
         <label for="typebox"> Book Type</label>
         <select id="typebox">
-          <option value="none">No Filter</option>
+          <option value="full">Full</option>
           <option value="free e-book">Free E-Book</option>
         </select>
       </div>
