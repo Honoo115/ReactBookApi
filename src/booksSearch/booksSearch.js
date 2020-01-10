@@ -17,7 +17,7 @@ class BooksSearch extends Component {
   handleSubmit(event) {
     event.preventDefault();
     fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=${this.state.value}&AIzaSyBLnsNugklSnZuKWbk0Ve75GfYBX1Qe1lc&filter=${value}&printType=${value}`
+      `https://www.googleapis.com/books/v1/volumes?q=${this.state.value}&AIzaSyBLnsNugklSnZuKWbk0Ve75GfYBX1Qe1lc&filter=&printType=`
     )
       .then(response => {
         if (!response.ok) {
